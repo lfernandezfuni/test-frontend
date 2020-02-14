@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <h3 class="card-header">Listado de grupos</h3>
+      <div class="card-body">
+        <table class="table">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Estilo</th>
+            <th>Acción</th>
+          </tr>
+          <tr>
+          </tr>
+          <tr *ngFor="let grupo of listaGrupos">
+            <td>{{grupo.id_grupo}}</td>
+            <td>{{grupo.nombre}}</td>
+            <td><app-badge [id]="grupo.id_estilo"></app-badge></td>
+            <td><button class="btn btn-primary">Editar</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
